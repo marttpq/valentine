@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e9f0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0; /* Hidden initially */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4d4d;
+            color: white;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        button:hover {
+            background-color: #ff6666; /* Darken color on hover */
+        }
+        .heart-rain {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url('https://i.imgur.com/ivohkRf.png'); /* heart image */
+            background-size: cover;
+            z-index: 9999;
+            pointer-events: none;
+            animation: heartFall 3s linear infinite;
+        }
+        @keyframes heartFall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        /* Love effect for the image */
+        .love-effect {
+            animation: loveEffect 2s linear infinite alternate;
+        }
+        @keyframes loveEffect {
+            0% {
+                transform: translateX(-2px);
+            }
+            100% {
+                transform: translateX(2px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Will You Be My Valentine?</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <p>Do you want to be my Valentine?</p>
+            <button onclick="goToYesPage()">Yes</button>
+            <button onclick="goToNoPage()">No</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Valentine's Day Website
+    </footer>
+    <script>
+        function goToYesPage() {
+            window.location.href = "yes.html";
+        }
+
+        function goToNoPage() {
+            window.location.href = "no.html";
+        }
+    </script>
+    <!-- Add heart rain -->
+    <div class="heart-rain"></div>
+    <center>
+        <!-- Add love effect class to the image -->
+        <img src="mumu1.jpg" width="450" padding="200px" class="love-effect">
+    </center>
+</body>
+</html>
